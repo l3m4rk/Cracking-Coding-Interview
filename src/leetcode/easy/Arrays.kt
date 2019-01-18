@@ -27,3 +27,18 @@ fun singleNumber(nums: IntArray): Int {
     }
     return -1
 }
+
+
+fun containsDuplicate(nums: IntArray): Boolean {
+
+    if (nums.isEmpty()) return false
+
+    val h = HashSet<Int>()
+
+    nums.forEach {
+        if (h.contains(it)) return true
+        else h.add(it)
+    }
+
+    return false
+}
